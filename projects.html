@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athul VC | All Projects</title>
+  <meta name="description" content="All projects by Athul VC. Explore complete project showcase including web apps, UI concepts, and training builds." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body class="projects-page-body">
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p>Loading Project Matrix...</p>
+  </div>
+
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html#hero" class="brand">ATHUL<span> VC</span></a>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section projects-hero-section reveal">
+      <div class="projects-hero-panel">
+        <p class="status-pill">PROJECT SHOWCASE</p>
+        <h1>All Projects</h1>
+        <p>
+          A full collection of my project work, UI concepts, and full stack practice builds.
+          This page is dedicated to showcasing everything in one place.
+        </p>
+        <div class="projects-meta-list">
+          <span>Web Apps</span>
+          <span>Portfolio Builds</span>
+          <span>UI Concepts</span>
+          <span>Training Projects</span>
+        </div>
+        <div class="projects-hero-actions">
+          <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          <a href="index.html#contact" class="btn btn-primary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>Project Library</h2>
+        <p>Click any card action to open demo/source. This section is designed for complete recruiter visibility.</p>
+      </div>
+
+      <div class="project-grid project-grid-expanded">
+        <article class="project-card" data-open-url="my-task-app.html">
+          <div class="project-media media-1">
+            <img src="assets/projects/mytasks.jpg" alt="My Task iOS application preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>My Task - iOS Application</h3>
+            <p class="project-desc">Task manager interface with clean interaction flow and productivity-first layout.</p>
+            <div class="badge-wrap">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>CRUD</span>
+            </div>
+            <div class="project-actions">
+              <a href="my-task-app.html">View Details</a>
+              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-2">
+            <img src="assets/projects/personalportfolio.jpg" alt="Personal portfolio website preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Personal Portfolio Website</h3>
+            <p class="project-desc">A responsive portfolio build with immersive visual design and performance-focused structure.</p>
+            <div class="badge-wrap">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive UI</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-3">
+            <img src="assets/projects/project-aboutus.png" alt="About Us banner concept" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>About Us Banner Concept</h3>
+            <p class="project-desc">Brand-focused visual composition for promotional and landing page sections.</p>
+            <div class="badge-wrap">
+              <span>Graphic Design</span>
+              <span>Branding</span>
+              <span>Layout</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/projects/project-aboutus.png" target="_blank" rel="noopener noreferrer">View Image</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-1">
+            <img src="assets/projects/project-bannerhome.png" alt="Home banner concept preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Home Banner Design</h3>
+            <p class="project-desc">Creative banner concept for promotional campaigns with attention-grabbing visual hierarchy.</p>
+            <div class="badge-wrap">
+              <span>Visual Design</span>
+              <span>Creative Layout</span>
+              <span>Brand Asset</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/projects/project-bannerhome.png" target="_blank" rel="noopener noreferrer">View Image</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-2">
+            <img src="assets/projects/project-bannerhome1.png" alt="Alternate banner concept preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Banner Variant V2</h3>
+            <p class="project-desc">Second variation of campaign-ready banner composition for multi-platform usage.</p>
+            <div class="badge-wrap">
+              <span>Design System</span>
+              <span>Marketing Visuals</span>
+              <span>Iteration</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/projects/project-bannerhome1.png" target="_blank" rel="noopener noreferrer">View Image</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-3">
+            <img src="assets/projects/project-aboutus9.png" alt="Extended about concept preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>About Section Concept Extended</h3>
+            <p class="project-desc">Expanded visual direction for About section with stronger brand storytelling elements.</p>
+            <div class="badge-wrap">
+              <span>UI Concept</span>
+              <span>Brand Storytelling</span>
+              <span>Composition</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/projects/project-aboutus9.png" target="_blank" rel="noopener noreferrer">View Image</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-1">
+            <img src="assets/projects/mytasks.png" alt="My Tasks application alternate preview" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>My Tasks - Alternate UI Build</h3>
+            <p class="project-desc">Alternative visual style of task workflow with card-based status organization.</p>
+            <div class="badge-wrap">
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+              <span>Productivity</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/projects/mytasks.png" target="_blank" rel="noopener noreferrer">View Image</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media media-2">
+            <img src="assets/projects/commingsoon.png" alt="Coming soon project placeholder" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>More Projects Coming Soon</h3>
+            <p class="project-desc">Additional full stack and frontend projects are in progress and will be published here.</p>
+            <div class="badge-wrap">
+              <span>In Progress</span>
+              <span>Full Stack</span>
+              <span>Web Development</span>
+            </div>
+            <div class="project-actions">
+              <a href="index.html#contact">Request Preview</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Athul VC. All Projects Showcase.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

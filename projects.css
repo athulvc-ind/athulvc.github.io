@@ -1,0 +1,66 @@
+.projects-page-body main {
+  padding-top: 5.4rem;
+}
+
+.projects-hero-section {
+  padding-top: 2.2rem;
+  padding-bottom: 2.8rem;
+}
+
+.projects-hero-panel {
+  border: 1px solid rgba(132, 189, 255, 0.25);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  padding: clamp(1rem, 3vw, 2rem);
+  box-shadow: 0 0 26px rgba(16, 228, 255, 0.16);
+}
+
+.projects-hero-panel h1 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+}
+
+.projects-hero-panel p {
+  color: var(--text-dim);
+  max-width: 760px;
+}
+
+.projects-meta-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.projects-meta-list span {
+  font-size: 0.8rem;
+  border: 1px solid rgba(16, 228, 255, 0.45);
+  background: rgba(16, 228, 255, 0.09);
+  color: #d8faff;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+}
+
+.projects-hero-actions {
+  margin-top: 1.35rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.project-grid-expanded .project-card {
+  min-height: 100%;
+}
+
+@media (max-width: 760px) {
+  .projects-page-body main {
+    padding-top: 5rem;
+  }
+
+  .projects-hero-actions {
+    justify-content: flex-start;
+  }
+}

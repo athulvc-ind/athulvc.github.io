@@ -51,7 +51,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#tech">Tech</a>
-      <a href="#projects">Projects</a>
+      <a href="projects.html">Projects</a>
       <a href="#journey">Journey</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -68,7 +68,7 @@
           <p class="typing-line"><span id="typing-text"></span><span class="cursor">|</span></p>
           <p class="hero-meta">Calicut, Kerala, India </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="projects.html" class="btn btn-primary">View Projects</a>
             <a href="assets/Athul-Resume.docx" class="btn btn-secondary" download>Download Resume</a>
           </div>
         </div>
@@ -159,7 +159,7 @@
         <p>Hands-on projects completed during training and practice.</p>
       </div>
       <div class="project-grid">
-        <article class="project-card">
+        <article class="project-card" data-open-url="my-task-app.html">
           <div class="project-media media-1">
             <img src="assets/projects/mytasks.jpg" alt="To-Do list web application preview" loading="lazy" />
           </div>
@@ -173,13 +173,14 @@
               <span>Local Storage</span>
             </div>
             <div class="project-actions">
+              <a href="my-task-app.html" aria-label="View details of My Task iOS Application">View Details</a>
               <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Live demo To-Do List Web Application">Live Demo</a>
               <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository To-Do List Web Application">GitHub</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-open-projects>
           <div class="project-media media-2">
             <img src="assets/projects/personalportfolio.jpg" alt="Personal portfolio website preview" loading="lazy" />
           </div>
@@ -199,7 +200,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-open-projects>
           <div class="project-media media-3">
             <img src="assets/projects/commingsoon.png" alt="Full stack development training project preview" loading="lazy" />
           </div>
@@ -218,6 +219,9 @@
             </div>
           </div>
         </article>
+      </div>
+      <div class="projects-page-cta">
+        <a href="projects.html" class="btn btn-primary">See All Projects</a>
       </div>
     </section>
 

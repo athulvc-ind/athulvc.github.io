@@ -197,6 +197,28 @@ function setupContactForm() {
   });
 }
 
+function setupProjectCardNavigation() {
+  const cards = document.querySelectorAll("[data-open-url], [data-open-projects]");
+  if (cards.length === 0) return;
+
+  cards.forEach((card) => {
+    const targetUrl = card.dataset.openUrl || "projects.html";
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "link");
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) return;
+      window.location.href = targetUrl;
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      window.location.href = targetUrl;
+    });
+  });
+}
+
 window.addEventListener("load", () => {
   if (loader) {
     window.setTimeout(() => loader.classList.add("hidden"), 650);
@@ -209,6 +231,7 @@ window.addEventListener("load", () => {
   setupCursorGlow();
   setupParticles();
   setupContactForm();
+  setupProjectCardNavigation();
 
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear().toString();
