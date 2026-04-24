@@ -4,19 +4,30 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Athul VC | Full Stack Developer Portfolio</title>
-  <meta name="description" content="Athul VC is a detail-oriented Full Stack Developer trainee from Calicut, Kerala with hands-on experience in responsive web applications using JavaScript, Node.js, Express.js, and modern frontend development." />
-  <meta name="keywords" content="Athul VC, full stack developer trainee, Calicut, JavaScript, HTML5, CSS3, Node.js, Express.js, MongoDB, MySQL, portfolio" />
+  <title>Athul VC | Immersive Full Stack Portfolio</title>
+  <meta
+    name="description"
+    content="Athul VC is a Full Stack Developer trainee from Calicut, Kerala. Explore an immersive portfolio with interactive 3D visuals, projects, tech stack, and contact details."
+  />
+  <meta name="keywords" content="Athul VC, Full Stack Developer, JavaScript, Node.js, portfolio, Kerala, web development" />
   <meta name="author" content="Athul VC" />
-  <meta property="og:title" content="Athul VC | Futuristic Portfolio" />
-  <meta property="og:description" content="Full Stack Developer trainee portfolio of Athul VC with projects, skills, and training details." />
+  <meta property="og:title" content="Athul VC | Immersive Developer Portfolio" />
+  <meta
+    property="og:description"
+    content="Interactive full stack developer portfolio with 3D elements, project showcase, and modern UI interactions."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://athulvc.github.io/" />
-  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="theme-color" content="#f3efe6" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="portfolio-wow.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="portfolio-wow.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,236 +43,291 @@
         "addressRegion": "Kerala",
         "addressCountry": "India"
       },
-      "sameAs": ["https://www.linkedin.com/in/athulvc/"],
-      "knowsAbout": ["JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design", "DOM Manipulation", "Node.js", "Express.js", "MongoDB", "MySQL", "Git", "GitHub"]
+      "sameAs": [
+        "https://www.linkedin.com/in/athulvc/",
+        "https://github.com/athulvc"
+      ],
+      "knowsAbout": [
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Responsive Web Design"
+      ]
     }
   </script>
 </head>
 <body>
-  <div id="loader" class="loader" aria-hidden="true">
-    <div class="loader-ring"></div>
-    <p>Initializing Neural Interface...</p>
-  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
-  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a href="#hero" class="brand">ATHUL<span> VC</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tech">Tech</a>
-      <a href="projects.html">Projects</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact">Contact</a>
+  <header class="topbar" id="home">
+    <a href="#home" class="brand magnetic">ATHUL<span>VC</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about" class="magnetic">About</a>
+      <a href="#tech" class="magnetic">Tech</a>
+      <a href="#projects" class="magnetic">Projects</a>
+      <a href="#journey" class="magnetic">Journey</a>
+      <a href="#contact" class="magnetic">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="hero" class="hero">
-      <div class="hero-grid"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content parallax" data-speed="0.08">
-        <div class="hero-copy">
-          <p class="status-pill">FULL STACK DEVELOPER TRAINEE</p>
+    <section class="hero">
+      <div class="hero-orb orb-a parallax-layer" data-depth="18"></div>
+      <div class="hero-orb orb-b parallax-layer" data-depth="30"></div>
+      <div class="hero-orb orb-c parallax-layer" data-depth="12"></div>
+
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <p class="hero-tag">FULL STACK DEVELOPER TRAINEE</p>
           <h1>ATHUL VC</h1>
-          <p class="typing-line"><span id="typing-text"></span><span class="cursor">|</span></p>
-          <p class="hero-meta">Calicut, Kerala, India </p>
+          <p class="hero-type">
+            <span id="typing-text"></span>
+            <span class="typing-caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-intro">
+            I build responsive, modern web experiences with clean frontend architecture and scalable backend fundamentals.
+            This portfolio is designed to be experienced, not just read.
+          </p>
           <div class="hero-actions">
-            <a href="projects.html" class="btn btn-primary">View Projects</a>
-            <a href="assets/Athul-Resume.docx" class="btn btn-secondary" download>Download Resume</a>
+            <a href="projects.html" class="btn btn-solid magnetic">Explore Projects</a>
+            <a href="assets/Athul-Resume.docx" class="btn btn-outline magnetic" download>Download Resume</a>
+          </div>
+
+          <div class="hero-metrics interactive-panel reveal">
+            <div class="metric">
+              <span class="metric-value" data-counter="12">0</span>
+              <span class="metric-label">Hands-On Builds</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-counter="6">0</span>
+              <span class="metric-label">Core Tech Domains</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-counter="100">0</span>
+              <span class="metric-label">Focus on Quality</span>
+            </div>
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="profile-frame">
-            <img src="assets/profile-photo.jpg" alt="Portrait of Athul VC" loading="eager" />
+
+        <div class="hero-stage reveal">
+          <div id="hero-3d" aria-hidden="true"></div>
+
+          <article class="profile-card interactive-panel tilt-panel" data-tilt>
+            <img src="assets/profile-photo.jpg" alt="Portrait of Athul VC" />
+            <div class="profile-meta">
+              <p class="profile-name">Athul VC</p>
+              <p>Calicut, Kerala, India</p>
+            </div>
+          </article>
+
+          <div class="cube-wrap tilt-panel" data-tilt aria-hidden="true">
+            <div class="cube">
+              <div class="face front">JS</div>
+              <div class="face back">API</div>
+              <div class="face right">UI</div>
+              <div class="face left">DB</div>
+              <div class="face top">NODE</div>
+              <div class="face bottom">WEB</div>
+            </div>
           </div>
         </div>
       </div>
-      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
-        <span></span>
+
+      <a href="#about" class="scroll-cue magnetic" aria-label="Scroll to About section">
+        <span>Scroll</span>
+        <i></i>
       </a>
     </section>
 
-    <section id="about" class="section reveal">
-      <div class="section-heading">
-        <h2>About</h2>
-        <p>Professional summary and profile snapshot.</p>
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">ABOUT</p>
+        <h2>Developer Mindset + Business Clarity</h2>
       </div>
-      <article class="glass-card">
-        <p>
-          Detail-oriented and highly motivated <strong>Full Stack Developer trainee</strong> with a Bachelor of Commerce from the University of Calicut
-          and professional training at Cybersquare Professional. Strong foundation in frontend and backend development with hands-on project experience
-          in building responsive web applications. Currently seeking an entry-level opportunity in a multinational organization to apply technical expertise
-          and problem-solving skills in scalable software development.
-        </p>
-      </article>
+
+      <div class="about-grid">
+        <article class="interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Profile Snapshot</h3>
+          <p>
+            Detail-oriented Full Stack Developer trainee with a Bachelor of Commerce from the University of Calicut and
+            professional training at Cybersquare Professional. I blend business understanding with engineering execution.
+          </p>
+          <ul class="list-lines">
+            <li>Strong in HTML5, CSS3, JavaScript, and responsive UX patterns</li>
+            <li>Backend foundation with Node.js, Express.js, and REST principles</li>
+            <li>Comfortable with MySQL, MongoDB, and practical CRUD implementation</li>
+          </ul>
+        </article>
+
+        <article class="interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Current Focus</h3>
+          <p>
+            I am actively preparing for entry-level roles where I can contribute to product teams, build scalable features,
+            and grow into a high-impact full stack engineer.
+          </p>
+          <div class="focus-grid">
+            <span class="chip magnetic">Frontend Architecture</span>
+            <span class="chip magnetic">Backend Workflows</span>
+            <span class="chip magnetic">API Integration</span>
+            <span class="chip magnetic">Performance Thinking</span>
+            <span class="chip magnetic">Clean UI Systems</span>
+            <span class="chip magnetic">Problem Solving</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="tech" class="section reveal">
-      <div class="section-heading">
-        <h2>Tech Stack</h2>
-        <p>Core technologies, tools, and development fundamentals.</p>
+    <section id="tech" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">TECH STACK</p>
+        <h2>Interactive Toolbelt</h2>
       </div>
-      <div class="tech-grid">
-        <article class="tech-card tilt" data-tilt>
+
+      <div class="stack-grid">
+        <article class="stack-card interactive-panel tilt-panel reveal" data-tilt>
           <h3>Programming</h3>
-          <div class="badge-wrap">
-            <span>JavaScript (ES6+)</span>
+          <div class="tech-cloud">
+            <span class="tech-item magnetic">JavaScript (ES6+)</span>
           </div>
         </article>
-        <article class="tech-card tilt" data-tilt>
+
+        <article class="stack-card interactive-panel tilt-panel reveal" data-tilt>
           <h3>Frontend</h3>
-          <div class="badge-wrap">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>Responsive Web Design</span>
-            <span>DOM Manipulation</span>
+          <div class="tech-cloud">
+            <span class="tech-item magnetic">HTML5</span>
+            <span class="tech-item magnetic">CSS3</span>
+            <span class="tech-item magnetic">Responsive Design</span>
+            <span class="tech-item magnetic">DOM Manipulation</span>
           </div>
         </article>
-        <article class="tech-card tilt" data-tilt>
+
+        <article class="stack-card interactive-panel tilt-panel reveal" data-tilt>
           <h3>Backend</h3>
-          <div class="badge-wrap">
-            <span>Node.js</span>
-            <span>Express.js (Basic)</span>
+          <div class="tech-cloud">
+            <span class="tech-item magnetic">Node.js</span>
+            <span class="tech-item magnetic">Express.js</span>
+            <span class="tech-item magnetic">REST API Basics</span>
           </div>
         </article>
-        <article class="tech-card tilt" data-tilt>
-          <h3>Database</h3>
-          <div class="badge-wrap">
-            <span>MySQL</span>
-            <span>MongoDB</span>
-            <span>Basic CRUD Operations</span>
-          </div>
-        </article>
-        <article class="tech-card tilt" data-tilt>
-          <h3>Tools & Version Control</h3>
-          <div class="badge-wrap">
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>VS Code</span>
-          </div>
-        </article>
-        <article class="tech-card tilt" data-tilt>
-          <h3>Concepts</h3>
-          <div class="badge-wrap">
-            <span>REST API Fundamentals</span>
-            <span>Client-Server Architecture</span>
-            <span>MVC Pattern</span>
+
+        <article class="stack-card interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Data + Tools</h3>
+          <div class="tech-cloud">
+            <span class="tech-item magnetic">MongoDB</span>
+            <span class="tech-item magnetic">MySQL</span>
+            <span class="tech-item magnetic">Git</span>
+            <span class="tech-item magnetic">GitHub</span>
+            <span class="tech-item magnetic">VS Code</span>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section reveal">
-      <div class="section-heading">
-        <h2>Projects</h2>
-        <p>Hands-on projects completed during training and practice.</p>
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">PROJECTS</p>
+        <h2>Work You Can Explore</h2>
       </div>
+
       <div class="project-grid">
-        <article class="project-card" data-open-url="my-task-app.html">
-          <div class="project-media media-1">
-            <img src="assets/projects/mytasks.jpg" alt="To-Do list web application preview" loading="lazy" />
+        <article class="project-card interactive-panel tilt-panel reveal" data-tilt data-open-url="my-task-app.html">
+          <div class="project-media">
+            <img src="assets/projects/mytasks.jpg" alt="My Task application preview" loading="lazy" />
           </div>
-          <div class="project-content">
-            <h3>My Task - IOS Application</h3>
-            <p class="project-desc">Developed a responsive task manager with CRUD operations and local storage integration.</p>
-            <div class="badge-wrap">
-              <span>HTML5</span>
-              <span>CSS3</span>
+          <div class="project-body">
+            <h3>My Task App</h3>
+            <p>Task management interface with CRUD flow, local storage persistence, and responsive interaction design.</p>
+            <div class="project-tags">
               <span>JavaScript</span>
+              <span>CRUD</span>
               <span>Local Storage</span>
             </div>
             <div class="project-actions">
-              <a href="my-task-app.html" aria-label="View details of My Task iOS Application">View Details</a>
-              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Live demo To-Do List Web Application">Live Demo</a>
-              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository To-Do List Web Application">GitHub</a>
+              <a href="my-task-app.html" class="magnetic">Case Study</a>
+              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer" class="magnetic">Live Demo</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" class="magnetic">GitHub</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-open-projects>
-          <div class="project-media media-2">
-            <img src="assets/projects/personalportfolio.jpg" alt="Personal portfolio website preview" loading="lazy" />
+        <article class="project-card interactive-panel tilt-panel reveal" data-tilt data-open-url="projects.html">
+          <div class="project-media">
+            <img src="assets/projects/personalportfolio.jpg" alt="Portfolio project preview" loading="lazy" />
           </div>
-          <div class="project-content">
-            <h3>Personal Portfolio Website</h3>
-            <p class="project-desc">Designed and built a fully responsive portfolio with optimized structure and clean UI.</p>
-            <div class="badge-wrap">
+          <div class="project-body">
+            <h3>Portfolio System</h3>
+            <p>Modern portfolio architecture focused on visual impact, storytelling, and recruiter-friendly structure.</p>
+            <div class="project-tags">
               <span>HTML5</span>
               <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>Responsive Design</span>
+              <span>Interaction Design</span>
             </div>
             <div class="project-actions">
-              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Live demo Personal Portfolio Website">Live Demo</a>
-              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository Personal Portfolio Website">GitHub</a>
+              <a href="projects.html" class="magnetic">See More</a>
+              <a href="https://athulvc.github.io/" target="_blank" rel="noopener noreferrer" class="magnetic">Live Demo</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" class="magnetic">GitHub</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-open-projects>
-          <div class="project-media media-3">
-            <img src="assets/projects/commingsoon.png" alt="Full stack development training project preview" loading="lazy" />
+        <article class="project-card interactive-panel tilt-panel reveal" data-tilt data-open-url="projects.html">
+          <div class="project-media">
+            <img src="assets/projects/commingsoon.png" alt="Upcoming full stack projects preview" loading="lazy" />
           </div>
-          <div class="project-content">
-            <h3>Full Stack Training Projects</h3>
-            <p class="project-desc">Built foundational backend and API practice modules during Cybersquare Professional training.</p>
-            <div class="badge-wrap">
+          <div class="project-body">
+            <h3>Full Stack Training Builds</h3>
+            <p>Backend modules and API practice work completed during Cybersquare Professional training.</p>
+            <div class="project-tags">
               <span>Node.js</span>
               <span>Express.js</span>
               <span>MongoDB</span>
-              <span>REST API</span>
             </div>
             <div class="project-actions">
-              <a href="https://cybersquare.pro" target="_blank" rel="noopener noreferrer" aria-label="Cybersquare Professional training website">Live Demo</a>
-              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository Full Stack Training Projects">GitHub</a>
+              <a href="projects.html" class="magnetic">All Projects</a>
+              <a href="https://cybersquare.pro" target="_blank" rel="noopener noreferrer" class="magnetic">Training Site</a>
+              <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" class="magnetic">GitHub</a>
             </div>
           </div>
         </article>
       </div>
-      <div class="projects-page-cta">
-        <a href="projects.html" class="btn btn-primary">See All Projects</a>
-      </div>
     </section>
 
-    <section id="journey" class="section reveal">
-      <div class="section-heading">
-        <h2>Journey Timeline</h2>
-        <p>Education, training, and practical development progression.</p>
+    <section id="journey" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">JOURNEY</p>
+        <h2>Progress Timeline</h2>
       </div>
+
       <div class="timeline">
-        <article class="timeline-item">
-          <span class="timeline-node"></span>
-          <div class="timeline-content">
-            <h3>Academic Foundation</h3>
-            <p>Completed Bachelor of Commerce (B.Com) from the University of Calicut, Kerala, India.</p>
-          </div>
+        <article class="timeline-item interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Academic Foundation</h3>
+          <p>Completed Bachelor of Commerce from the University of Calicut with strong analytical and structured thinking fundamentals.</p>
         </article>
-        <article class="timeline-item">
-          <span class="timeline-node"></span>
-          <div class="timeline-content">
-            <h3>Professional Training</h3>
-            <p>Completed Full Stack Development Program at Cybersquare Professional with frontend and backend practice.</p>
-          </div>
+        <article class="timeline-item interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Professional Training</h3>
+          <p>Completed full stack training at Cybersquare Professional with practical experience in frontend and backend workflows.</p>
         </article>
-        <article class="timeline-item">
-          <span class="timeline-node"></span>
-          <div class="timeline-content">
-            <h3>Project & Interview Stage</h3>
-            <p>Built responsive applications and strengthened problem-solving to become job-ready for entry-level developer roles.</p>
-          </div>
+        <article class="timeline-item interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Execution Stage</h3>
+          <p>Building production-style projects and improving interview readiness for entry-level full stack opportunities.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="section reveal">
-      <div class="section-heading">
-        <h2>Contact</h2>
-        <p>Open to entry-level full stack developer opportunities and collaborations.</p>
+    <section id="contact" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">CONTACT</p>
+        <h2>Let&apos;s Build Something Strong Together</h2>
       </div>
-      <div class="contact-wrap">
-        <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+
+      <div class="contact-grid">
+        <form id="contact-form" class="interactive-panel reveal" novalidate>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" placeholder="Your name" required />
 
@@ -271,50 +337,32 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
 
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-solid magnetic">Send Message</button>
           <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
 
-        <div class="contact-side">
-          <div class="contact-details">
-            <h3>Direct Details</h3>
-            <p><strong>Name:</strong> ATHUL V C</p>
-            <p><strong>Location:</strong> Calicut, Kerala, India</p>
-            <p><strong>Phone:</strong> <a href="tel:+919567039176">+91 9567039176</a></p>
-            <p><strong>Email:</strong> <a href="mailto:Athulvcpalazhi@gmail.com">Athulvcpalazhi@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/athulvc/" target="_blank" rel="noopener noreferrer">linkedin.com/in/athulvc</a></p>
+        <aside class="interactive-panel tilt-panel reveal" data-tilt>
+          <h3>Direct Reach</h3>
+          <ul class="contact-list">
+            <li><strong>Location:</strong> Calicut, Kerala, India</li>
+            <li><strong>Phone:</strong> <a href="tel:+919567039176" class="magnetic">+91 9567039176</a></li>
+            <li><strong>Email:</strong> <a href="mailto:Athulvcpalazhi@gmail.com" class="magnetic">Athulvcpalazhi@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/athulvc/" target="_blank" rel="noopener noreferrer" class="magnetic">linkedin.com/in/athulvc</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" class="magnetic">github.com/athulvc</a></li>
+          </ul>
+
+          <div class="social-row">
+            <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" class="magnetic">GitHub</a>
+            <a href="https://www.linkedin.com/in/athulvc/" target="_blank" rel="noopener noreferrer" class="magnetic">LinkedIn</a>
+            <a href="https://www.instagram.com/athul_dedos/" target="_blank" rel="noopener noreferrer" class="magnetic">Instagram</a>
           </div>
-          <div class="socials" aria-label="Social links">
-            <a href="https://github.com/athulvc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.39 7.86 10.9.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2.01-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.27-5.24-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.73.8 1.17 1.82 1.17 3.07 0 4.41-2.7 5.38-5.27 5.67.41.35.79 1.04.79 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/athulvc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5.001A2.5 2.5 0 0 0 4.98 3.5zM3 9.75h3.96V21H3V9.75zm7.06 0h3.79v1.54h.05c.53-1 1.82-2.06 3.75-2.06 4 0 4.74 2.63 4.74 6.05V21h-3.96v-5.03c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.31-1.93 2.66V21h-3.97V9.75z"/>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/athul_dedos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.9 2.9 0 0 0 12 9.1zm4.95-2.55a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
-              </svg>
-            </a>
-            <a href="mailto:athulvcpalazhi@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M3 5.5h18a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 17V7A1.5 1.5 0 0 1 3 5.5zm0 1.5v.26L12 13l9-5.74V7H3zm18 10V9.03l-8.6 5.48a.75.75 0 0 1-.8 0L3 9.03V17h18z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Athul VC. Personal Portfolio Build by ATHUL .</p>
+    <p>&copy; <span id="year"></span> Athul VC. Immersive Portfolio Experience.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
